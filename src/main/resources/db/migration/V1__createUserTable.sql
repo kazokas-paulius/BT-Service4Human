@@ -6,7 +6,7 @@ CREATE TABLE `user_data` (
   `password` varchar(255) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
   `phone` int(9) DEFAULT NULL,
-  `targetText` varchar(4000) DEFAULT NULL,
+  `target_text` varchar(4000) DEFAULT NULL,
   `comment` varchar(255) DEFAULT NULL,
   `ratting` int(1) DEFAULT NULL,
   PRIMARY KEY (`id`)

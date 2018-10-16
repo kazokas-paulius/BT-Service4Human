@@ -1,13 +1,28 @@
 <!DOCTYPE html>
-<html>
+
+<html xmlns:th="http://www.thymeleaf.org">
 	<head>
 	<link rel="stylesheet" href="styles.css">
 		<title>Page Title</title>
 	</head>
 	<body>
-
-	<h1>BalticTalents Projektinis</h1>
-	<p>User puse</p>
-
+		<h1>Service 4 Hooman</h1>
+		<form th:action="@{/get}" method="POST">
+			<input type="submit" value="submit">
+		</form>
+		<table th:if="${users}" border="1" style="float: right">
+        <th:block th:each="user : ${users}">
+            <tr>
+                <td th:text="${user.firstname}">...</td>
+                <td th:text="${user.lastname}">...</td>
+                <td th:text="${user.username}">...</td>
+                <td th:text="${user.password}">...</td>
+                <td th:text="${user.email}">...</td>
+                <td th:text="${user.phone}">...</td>
+                <td th:text="${user.target_text}">...</td>
+                
+            </tr>
+        </th:block>
+    	</table>
 	</body>
 </html>
