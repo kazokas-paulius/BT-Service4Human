@@ -3,7 +3,8 @@ null, null,
 null, null,
 null,
 "lietuviu kalba", "persiku kalba",
-null, null
+null, null,
+null
 );
 
 UPDATE user.order_template ot, user.user_data ud

@@ -50,7 +50,7 @@ public class OrderTemplate {
 	// SET ot.estimated_date = p.estimated_date;
 	
 	@Column(name = "price_hour")
-	private double price_hour;
+	private float price_hour;
 	// UPDATE user.order_template ot, user.providers p
 	// SET ot.price_hour = p.price_hour;
 	
@@ -141,7 +141,7 @@ public class OrderTemplate {
 		return price_hour;
 	}
 
-	public void setPrice_hour(double price_hour) {
+	public void setPrice_hour(float price_hour) {
 		this.price_hour = price_hour;
 	}
 }
