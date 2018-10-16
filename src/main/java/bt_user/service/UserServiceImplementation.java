@@ -1,15 +1,19 @@
-package service;
+package bt_user.service;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import entity.User;
-import repository.UserRepository;
+import bt_user.entity.User;
+import bt_user.repository.UserRepository;
 
 @Service
 @Transactional
 public class UserServiceImplementation implements UserService{
 
+	@Autowired
 	private UserRepository repository;
 	
 	@Override
@@ -18,8 +22,7 @@ public class UserServiceImplementation implements UserService{
 	}
 
 	@Override
-	public void saveOrder(User user) {
-		// TODO Auto-generated method stub
-		
+	public List<User> getUsers() {
+		return repository.findAll();
 	}
 }

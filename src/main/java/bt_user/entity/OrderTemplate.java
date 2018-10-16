@@ -1,8 +1,7 @@
-package entity;
+package bt_user.entity;
 
 import java.util.Date;
 import java.util.List;
-import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -24,10 +23,10 @@ public class OrderTemplate {
 	private int id;
 	
 	@Column(name = "users_id")
-	private List<User> users_id;
+	private int users_id;
 	
 	@Column(name = "orders_id")
-	private List<Order> orders_id;
+	private int orders_id;
 	
 	@Column(name = "user_username")
 	private String user_username;
@@ -63,29 +62,29 @@ public class OrderTemplate {
 	}
 	
 	@OneToMany(mappedBy = "orders", cascade = CascadeType.ALL)
-	public List<Order> getOrders(){
+	public int getOrders(){
 		return orders_id;
 	}
 	
-	public void setOrders(List<Order> orders_id) {
+	public void setOrders(int orders_id) {
 		this.orders_id = orders_id;
 	}
 	
 	@ManyToOne
 	@JoinColumn(name = "users")
-	public List<User> getUsers() {
+	public int getUsers() {
 		return users_id;
 	}
 
-	public void setUsers(List<User> users_id) {
+	public void setUsers(int users_id) {
 		this.users_id = users_id;
 	}
 
-	public List<Order> getOrders_id() {
+	public int getOrders_id() {
 		return orders_id;
 	}
 
-	public void setOrders_id(List<Order> orders_id) {
+	public void setOrders_id(int orders_id) {
 		this.orders_id = orders_id;
 	}
 
@@ -143,5 +142,13 @@ public class OrderTemplate {
 
 	public void setPrice_hour(float price_hour) {
 		this.price_hour = price_hour;
+	}
+
+	public int getUsers_id() {
+		return users_id;
+	}
+
+	public void setUsers_id(int users_id) {
+		this.users_id = users_id;
 	}
 }

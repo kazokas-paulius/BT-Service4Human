@@ -1,4 +1,4 @@
-package entity;
+package bt_user.entity;
 
 import java.util.List;
 
@@ -12,7 +12,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "user")
+@Table(name = "user_data")
 public class User {
 	
 	@Id
@@ -37,21 +37,29 @@ public class User {
 	@Column(name = "phone")
 	private int phone;
 	
-	@Column(name = "targetText")
-	private String targetText;
+	@Column(name = "target_text")
+	private String target_text;
 	
 	@Column(name = "comment")
 	private String comment;
 	
+	public String getTarget_text() {
+		return target_text;
+	}
+
+	public void setTarget_text(String target_text) {
+		this.target_text = target_text;
+	}
+
 	@Column(name = "ratting")
 	private int ratting;
 
 	public User() {}
 	
-	public User(String username, String password, String targetText, String comment) {
+	public User(String username, String password, String target_text, String comment) {
 		this.username = username;
 		this.password = password;
-		this.targetText = targetText;
+		this.target_text = target_text;
 		this.comment = comment;
 	}
 	
@@ -113,11 +121,11 @@ public class User {
 	}
 
 	public String getTargetText() {
-		return targetText;
+		return target_text;
 	}
 
-	public void setTargetText(String targetText) {
-		this.targetText = targetText;
+	public void setTargetText(String target_text) {
+		this.target_text = target_text;
 	}
 
 	public String getComment() {

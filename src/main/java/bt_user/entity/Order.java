@@ -1,4 +1,4 @@
-package entity;
+package bt_user.entity;
 
 import java.util.Date;
 
@@ -31,6 +31,14 @@ public class Order {
 	}
 
 	public void setOrder_id(int orders_id) {
+		this.orders_id = orders_id;
+	}
+
+	public int getOrders_id() {
+		return orders_id;
+	}
+
+	public void setOrders_id(int orders_id) {
 		this.orders_id = orders_id;
 	}
 
