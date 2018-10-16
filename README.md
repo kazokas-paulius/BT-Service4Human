@@ -2,7 +2,7 @@ Baltic Talents. Java 2 Project. Service For Humans - vertimų biuras.
 
 Idėjos:
 
-1. Pridėti order_template būseną:
+1. Pridėti order būseną:
 a.išsiųstas vertimas.
 b.gautas vertimas.
 c.verčiamas vertimas (+ kiek procentų išversta).
@@ -18,3 +18,7 @@ a.txt.
 b.pdf.
 c.word.
 (max 100 MB)
+
+4. Order_template ištrinti. Sumerginti į Orderį visą data.
+
+5. Perkelti target_text, comment, ratting iš userio į orderį.
