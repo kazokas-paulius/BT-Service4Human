@@ -9,6 +9,6 @@ import bt_user.entity.User;
 //surasti pagal laikus
 @Service
 public interface UserService {
-	User getUserById (Integer id);
 	List<User> getUsers();
+	String getUserByUsername(User u);
 }

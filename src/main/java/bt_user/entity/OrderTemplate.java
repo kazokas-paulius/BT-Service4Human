@@ -61,15 +61,6 @@ public class OrderTemplate {
 		this.id = id;
 	}
 	
-	@OneToMany(mappedBy = "orders", cascade = CascadeType.ALL)
-	public int getOrders(){
-		return orders_id;
-	}
-	
-	public void setOrders(int orders_id) {
-		this.orders_id = orders_id;
-	}
-	
 	@ManyToOne
 	@JoinColumn(name = "users")
 	public int getUsers() {

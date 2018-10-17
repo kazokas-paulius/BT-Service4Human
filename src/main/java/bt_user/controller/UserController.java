@@ -2,6 +2,8 @@ package bt_user.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -30,4 +32,13 @@ public class UserController {
 		return "index";
 	}
 	// get user_data end
+	
+	// get user name start
+	@PostMapping("/get2")
+	public String getUserFromDBByUsernamePost(Model model, HttpServletRequest hsrq) {
+		String searchRequest = hsrq.getParameter("searchUser");
+		model.addAttribute("usernames", searchRequest);
+		return "index";
+	}
+	//get user name end
 }
