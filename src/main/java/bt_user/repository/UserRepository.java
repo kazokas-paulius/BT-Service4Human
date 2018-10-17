@@ -9,5 +9,5 @@ import bt_user.entity.User;
 
 @Repository
 public interface UserRepository  extends JpaRepository<User, Integer>{
-	User getUserById (Integer id);
+	String getUser_DataByUsername(User u);
 }

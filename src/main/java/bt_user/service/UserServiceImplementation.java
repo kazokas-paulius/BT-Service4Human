@@ -15,14 +15,14 @@ public class UserServiceImplementation implements UserService{
 
 	@Autowired
 	private UserRepository repository;
-	
-	@Override
-	public User getUserById(Integer userId) {
-		return repository.getOne(userId);
-	}
 
 	@Override
 	public List<User> getUsers() {
 		return repository.findAll();
+	}
+	
+	@Override
+	public String getUserByUsername(User u) {
+		return repository.getUser_DataByUsername(u);
 	}
 }
