@@ -17,6 +17,7 @@ public class UserController {
 	@Autowired
 	private UserServiceImplementation service;
 	
+	// get user_data start
 	@PostMapping("/get")
 	public String getUsersFromDBPost() {
 		return "redirect:/userList";
@@ -28,4 +29,5 @@ public class UserController {
 		model.addAttribute("users",userList);
 		return "index";
 	}
+	// get user_data end
 }

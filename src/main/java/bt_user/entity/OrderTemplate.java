@@ -27,12 +27,9 @@ public class OrderTemplate {
 	
 	@Column(name = "orders_id")
 	private int orders_id;
-	
-	@Column(name = "user_username")
-	private String user_username;
-	
-	@Column(name = "translator")
-	private String translator;
+
+	@Column(name = "provider")
+	private String provider;
 	
 	@Column(name = "language_from")
 	private String language_from;
@@ -52,6 +49,9 @@ public class OrderTemplate {
 	private float price_hour;
 	// UPDATE user.order_template ot, user.providers p
 	// SET ot.price_hour = p.price_hour;
+	
+	@Column(name = "translation_text")
+	private String translation_text;
 	
 	public int getId() {
 		return id;
@@ -88,20 +88,12 @@ public class OrderTemplate {
 		this.orders_id = orders_id;
 	}
 
-	public String getUser_username() {
-		return user_username;
+	public String getProvider() {
+		return provider;
 	}
 
-	public void setUser_username(String user_username) {
-		this.user_username = user_username;
-	}
-
-	public String getTranslator() {
-		return translator;
-	}
-
-	public void setTranslator(String translator) {
-		this.translator = translator;
+	public void setProvider(String provider) {
+		this.provider = provider;
 	}
 
 	public String getLanguage_from() {
@@ -150,5 +142,13 @@ public class OrderTemplate {
 
 	public void setUsers_id(int users_id) {
 		this.users_id = users_id;
+	}
+
+	public String geTranslation_text() {
+		return translation_text;
+	}
+
+	public void setTranslation_text(String translation_text) {
+		this.translation_text = translation_text;
 	}
 }

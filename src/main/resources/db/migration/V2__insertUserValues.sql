@@ -5,8 +5,5 @@ null,
 "Persikijus69",
 "superslaptasslaptazodis123",
 "persiklover69@persikland.prsk",
-"123456789",
-"cia_pareina_vartotojo_tekstas",
-"komentaras parejo",
-5
+"123456789"
 );
