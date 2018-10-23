@@ -11,9 +11,17 @@
 		<header>
 			<nav>
 				<ul>
-					<li><a href="index2.html">Service For Human</a></li>
-					<li><a href="users.html">Users</a></li>
-					<li><a href="providers.html">Providers</a></li>
+					<li>
+						<a href="index.html">Service For Human</a>
+					</li>
+					<li>
+						<form th:action="@{/get}" method="POST">
+							<button class="buttons login-button" type="submit" name="button">Users</button>
+						</form>
+					</li>
+					<li>
+						<button class="buttons register-button" type="button" name="button">Providers</button>
+					</li>
 					<li><a href="orders.html">Orders</a></li>
 					<li><a href="loginForm.html">Log Out</a></li>
 				</ul>
@@ -23,7 +31,7 @@
 
 		<!-- get user_data -->
 		<form th:action="@{/get}" method="POST">
-			<input type="submit" value="submit"><br>
+			<button class="buttons login-button" type="submit" value="submit">Submit</button><br>
 		</form>
 		<table th:if="${users}" border="1" style="float: right">
 	        <th:block th:each="user : ${users}">
