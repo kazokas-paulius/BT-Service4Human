@@ -29,7 +29,7 @@ public class UserController {
 	public String getUsersFromDBGet(Model model) {
 		List<User> userList = service.getUsers();
 		model.addAttribute("users",userList);
-		return "index";
+		return "index2";
 	}
 	// get user_data end
 	
@@ -38,7 +38,7 @@ public class UserController {
 	public String getUserFromDBByUsernamePost(Model model, HttpServletRequest hsrq) {
 		String searchRequest = hsrq.getParameter("searchUser");
 		model.addAttribute("usernames", searchRequest);
-		return "index";
+		return "index2";
 	}
 	//get user name end
 }

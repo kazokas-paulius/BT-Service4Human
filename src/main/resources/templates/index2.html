@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zxx" dir="ltr" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="../static/css/style.min.css" th:href="@{/css/style.min.css}">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+		<title>Service For Human</title>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<ul>
+					<li><a href="index2.html">Service For Human</a></li>
+					<li><a href="users.html">Users</a></li>
+					<li><a href="providers.html">Providers</a></li>
+					<li><a href="orders.html">Orders</a></li>
+					<li><a href="loginForm.html">Log Out</a></li>
+				</ul>
+			</nav>
+		</header>
+		<h1>Service 4 Hooman</h1>
+
+		<!-- get user_data -->
+		<form th:action="@{/get}" method="POST">
+			<input type="submit" value="submit"><br>
+		</form>
+		<table th:if="${users}" border="1" style="float: right">
+	        <th:block th:each="user : ${users}">
+	            <tr>
+	                <td th:text="${user.firstname}">...</td>
+	                <td th:text="${user.lastname}">...</td>
+	                <td th:text="${user.username}">...</td>
+	                <td th:text="${user.password}">...</td>
+	                <td th:text="${user.email}">...</td>
+	                <td th:text="${user.phone}">...</td>
+	            </tr>
+	        </th:block>
+    	</table>
+
+		<!-- search by user name from user_data -->
+		<form th:action="@{/get2}" method="POST">
+    		Search: <input type="text" name="searchUser" placeholder="searchByUsername"><br>
+    		<input type="submit" value="search">
+    	</form>
+    	<table th:if="${usernames}" border="1" style="float: right">
+	    	<tr>
+	    		<td th:text="${usernames}">...</td>
+	    	</tr>
+    	</table>
+
+	</body>
+</html>

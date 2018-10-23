@@ -1,0 +1,35 @@
+@import "_variables.scss";
+
+// button
+@mixin button($log-padding, $log-background-color, $log-font-color, $log-border-radius, $log-hover-color) {
+    padding: $log-padding;
+    background-color: $log-background-color;
+    color: $log-font-color;
+    border-radius: $log-border-radius;
+    &:hover{
+        background-color: $log-hover-color;
+    }
+}
+
+.button {
+    // login button
+    &.login-button{
+        @include button(
+            $login-padding,
+            $login-background-color,
+            $login-font-color,
+            4px,
+            $login-hover-color
+        );
+    }
+    // register button
+    &.register-button{
+        @include button(
+            $register-padding,
+            $register-background-color,
+            $register-font-color,
+            4px,
+            $register-hover-color
+        );
+    }
+}
