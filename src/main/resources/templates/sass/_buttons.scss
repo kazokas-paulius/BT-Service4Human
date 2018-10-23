@@ -15,7 +15,7 @@
     border: $btn-border;
 }
 
-.buttons {
+.button {
     // login button
     &.login-button{
         @include buttons(
