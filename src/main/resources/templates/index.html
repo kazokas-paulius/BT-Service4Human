@@ -2,7 +2,7 @@
 <html lang="zxx" dir="ltr" xmlns:th="http://www.thymeleaf.org">
 	<head>
 		<meta charset="UTF-8">
-		<link rel="stylesheet" href="../static/css/style.min.css" th:href="@{/css/style.min.css}">
+		<link rel="stylesheet" href="sass/style.min.css" th:href="@{/css/style.min.css}">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 		<title>Service For Human</title>
@@ -20,7 +20,9 @@
 						</form>
 					</li>
 					<li>
-						<button class="button register-button" type="button" name="button">Providers</button>
+						<form th:action="@{/get2}" method="POST">
+							<button class="button register-button" type="button" name="button">Providers</button>
+						</form>
 					</li>
 					<li><a href="orders.html">Orders</a></li>
 					<li><a href="loginForm.html">Log Out</a></li>
