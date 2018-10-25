@@ -1,5 +1,5 @@
 package bt_user.entity;
-
+//KAZOKAS
 import java.util.List;
 
 import javax.persistence.CascadeType;

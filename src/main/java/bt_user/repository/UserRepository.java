@@ -1,5 +1,5 @@
 package bt_user.repository;
-
+//KAZOKAS
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;

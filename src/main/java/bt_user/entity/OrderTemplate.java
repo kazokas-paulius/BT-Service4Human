@@ -1,5 +1,5 @@
 package bt_user.entity;
-
+//KAZOKAS
 import java.util.Date;
 import java.util.List;
 
